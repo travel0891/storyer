@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+    <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.travel.storyer.dao.accountDao">
+	<select id="findOneByIntId" parameterType="int" resultType="accountModel">
+		select 0 as intId,'admin' as account,'123' as password,'sy' as
+		userName, newid() as photoUrl
+		where 1 = #{intId}
+	</select>
+</mapper>
+
+<!-- select intId,account,password,userName,photoUrl from account where intId 
+	= #{intId} -->
